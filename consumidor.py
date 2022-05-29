@@ -46,7 +46,7 @@ def filmes(arquivo):
 nomes_filmes = filmes('movies.dat')
 
 s = socket.socket()
-# Conectando o socket com o producer
+# Conectando o socket com o produdor
 s.connect(('127.0.0.1', 44444))
 
 data = s.recv(BUFFER)
@@ -77,7 +77,7 @@ while data:
     # 10 primeiros filmes
     final = ordemDec.take(10)
     
-    # Exibindo resultado final dos 10 melhores filmes entre os que foram geraldos
+    # Exibindo resultado final dos 10 melhores filmes entre os que foram gerados
     for result in final:
         print(nomes_filmes[result[1]],",", round(result[0], 2))
 
